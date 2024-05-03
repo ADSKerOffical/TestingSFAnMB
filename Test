@@ -178,5 +178,3 @@ closeButton.Parent = Main
 closeButton.MouseButton1Click:Connect(function()
 h:Destroy()
 end)
-  end    
-})
