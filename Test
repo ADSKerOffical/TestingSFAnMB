@@ -1,0 +1,182 @@
+local h = Instance.new("ScreenGui")
+local Main = Instance.new("ImageLabel")
+local Top = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local Text1Button = Instance.new("TextButton")
+local Text2Button = Instance.new("TextButton")
+local Text3Button = Instance.new("TextButton")
+local Text4Button = Instance.new("TextButton")
+
+h.Name = "h"
+h.Parent = game:GetService("CoreGui")
+h.ResetOnSpawn = true
+
+Main.Name = "Main"
+Main.Parent = h
+Main.Active = true
+Main.Draggable = true
+Main.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0.3, 0, 0.3, 0)
+Main.Size = UDim2.new(0, 300, 0, 160)
+Main.Image = "rbxassetid://16336200609"
+
+Top.Name = "Top"
+Top.Parent = Main
+Top.BackgroundColor3 = Color3.fromRGB(0, 90, 0)
+Top.BorderSizePixel = 0
+Top.Size = UDim2.new(1, 0, 0, 30)
+
+Title.Name = "Title"
+Title.Parent = Top
+Title.BackgroundColor3 = Color3.fromRGB(0, 60, 0)
+Title.BorderSizePixel = 0
+Title.Position = UDim2.new(0, 0, 0.295454562, 0)
+Title.Size = UDim2.new(1, 0, 1, 0)
+Title.Font = Enum.Font.SourceSans
+Title.Text = "Flash Gui"
+Title.TextColor3 = Color3.fromRGB(0, 255, 0)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
+
+TextButton.Parent = Main
+TextButton.BackgroundColor3 = Color3.fromRGB(0, 99, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.10, 0, 0.35, 0)
+TextButton.Size = UDim2.new(0.15, 0, 0.22, 0)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Upper cut"
+TextButton.TextColor3 = Color3.fromRGB(0, 255, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+
+Text1Button.Parent = Main
+Text1Button.BackgroundColor3 = Color3.fromRGB(0, 99, 0)
+Text1Button.BorderSizePixel = 0
+Text1Button.Position = UDim2.new(0.30, 0, 0.35, 0)
+Text1Button.Size = UDim2.new(0.15, 0, 0.22, 0)
+Text1Button.Font = Enum.Font.SourceSans
+Text1Button.Text = "High altitude cut"
+Text1Button.TextColor3 = Color3.fromRGB(0, 255, 0)
+Text1Button.TextScaled = true
+Text1Button.TextSize = 14.000
+Text1Button.TextWrapped = true
+
+Text2Button.Parent = Main
+Text2Button.BackgroundColor3 = Color3.fromRGB(0, 99, 0)
+Text2Button.BorderSizePixel = 0
+Text2Button.Position = UDim2.new(0.50, 0, 0.35, 0)
+Text2Button.Size = UDim2.new(0.15, 0, 0.22, 0)
+Text2Button.Font = Enum.Font.SourceSans
+Text2Button.Text = "Cutting technique"
+Text2Button.TextColor3 = Color3.fromRGB(0, 255, 0)
+Text2Button.TextScaled = true
+Text2Button.TextSize = 14.000
+Text2Button.TextWrapped = true
+
+Text3Button.Parent = Main
+Text3Button.BackgroundColor3 = Color3.fromRGB(0, 99, 0)
+Text3Button.BorderSizePixel = 0
+Text3Button.Position = UDim2.new(0.70, 0, 0.35, 0)
+Text3Button.Size = UDim2.new(0.15, 0, 0.22, 0)
+Text3Button.Font = Enum.Font.SourceSans
+Text3Button.Text = "Perfect slash"
+Text3Button.TextColor3 = Color3.fromRGB(0, 255, 0)
+Text3Button.TextScaled = true
+Text3Button.TextSize = 14.000
+Text3Button.TextWrapped = true
+
+Text4Button.Parent = Main
+Text4Button.BackgroundColor3 = Color3.fromRGB(0, 99, 0)
+Text4Button.BorderSizePixel = 0
+Text4Button.Position = UDim2.new(0.16, 0, 0.67, 0)
+Text4Button.Size = UDim2.new(0.7, 0, 0.22, 0)
+Text4Button.Font = Enum.Font.SourceSans
+Text4Button.Text = "Kill slash"
+Text4Button.TextColor3 = Color3.fromRGB(0, 255, 0)
+Text4Button.TextScaled = true
+Text4Button.TextSize = 14.000
+Text4Button.TextWrapped = true
+
+TextButton.MouseButton1Click:Connect(function()
+local LP = game.Players.LocalPlayer
+repeat wait() until LP.Character
+for i,v in pairs(LP.Backpack:GetChildren()) do
+   if v.Name == "Aerial Cleave" then
+       v.Parent = LP.Character
+   end
+end
+for i = 1, 5 do
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Aerial Cleave").LocalScript.Event:FireServer()
+end
+end)
+
+Text1Button.MouseButton1Click:Connect(function()
+local LP = game.Players.LocalPlayer
+repeat wait() until LP.Character
+for i,v in pairs(LP.Backpack:GetChildren()) do
+   if v.Name == "Upper Slash" then
+       v.Parent = LP.Character
+   end
+end
+for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Upper Slash").LocalScript.Event:FireServer()
+end
+end)
+
+Text2Button.MouseButton1Click:Connect(function()
+local LP = game.Players.LocalPlayer
+repeat wait() until LP.Character
+for i,v in pairs(LP.Backpack:GetChildren()) do
+   if v.Name == "Judgement Cut" then
+       v.Parent = LP.Character
+   end
+end
+for i = 1, 15 do
+task.wait()
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Judgement Cut").LocalScript.Event:FireServer()
+end
+end)
+
+Text3Button.MouseButton1Click:Connect(function()
+local LP = game.Players.LocalPlayer
+repeat wait() until LP.Character
+for i,v in pairs(LP.Backpack:GetChildren()) do
+   if v.Name == "Void Slash" then
+       v.Parent = LP.Character
+   end
+end
+for i = 1, 8 do
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Void Slash").LocalScript.Event:FireServer()
+end
+end)
+
+Text4Button.MouseButton1Click:Connect(function()
+local LP = game.Players.LocalPlayer
+repeat wait() until LP.Character
+for i,v in pairs(LP.Backpack:GetChildren()) do
+   if v.Name == "Judgement Cut End" then
+       v.Parent = LP.Character
+   end
+end
+for i = 1, 30 do
+task.wait()
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Judgement Cut End").LocalScript.Event:FireServer()
+end
+end)
+
+local closeButton = Instance.new("TextButton")
+closeButton.Size = UDim2.new(0, 36, 0, 37)
+closeButton.Position = UDim2.new(0.5, 113, 0.5, -79)
+closeButton.BackgroundColor3 = Color3.new(0.8, 0, 0)
+closeButton.Text = "X"
+closeButton.TextColor3 = Color3.new(1, 1, 1)
+closeButton.Parent = Main
+closeButton.MouseButton1Click:Connect(function()
+h:Destroy()
+end)
+  end    
+})
